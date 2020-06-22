@@ -1,0 +1,46 @@
+problem link:
+
+https://edyst.com/cohort/daily-coding-challenge-april-2020-0L0oG/module/daily-coding-challenge-april-2020-JxE19/topic/challenge-2-Yq97Y/question/6/name/-M4Yjxoetp52EOpJjDMA?is_required=1 
+
+
+code
+
+ import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main{
+	public static void main (String[] args) {
+		//System.out.print("helloworld");
+        Scanner sc=new Scanner(System.in);
+      int t=sc.nextInt();
+     // HashMap<Integer,String> hm=new HashMap<>();
+       for(int k=0;k<t;k++){
+       	int ceils=sc.nextInt();
+    	int prisoner=sc.nextInt();
+        int a[]=new int[ceils];
+        int j=0,i=0;
+        while(prisoner>0){
+        	
+        	if(i+j==ceils){
+        		j++;
+        		i=0;
+        	}
+        	if(j==ceils)
+        		break;
+        	a[i+j]+=1;
+        	prisoner--;
+        	i++;
+        }
+        while(prisoner>0){
+        	a[0]+=1;
+        	prisoner--;
+        } 
+        for(int p=0;p<ceils;p++)
+        System.out.print(a[p]+" ");
+           System.out.println();
+       }
+      }
+     }  
+   
+    	 
